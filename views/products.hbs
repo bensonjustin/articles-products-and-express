@@ -1,0 +1,20 @@
+<div>
+    <a href="products/new"><button id="post">Create New Product</button></a><br>
+    <h1>Current Product List</h1>
+    <div>{{#if error}}
+        <p>{{error.errorMessage}}</p>
+        {{/if}}
+    </div>
+    {{#each products}}
+    <ul>
+        <li>name: {{name}}</li>
+        <li>price: ${{price}}</li>
+        <li>inventory: {{inventory}}</li>
+<a href="products/edit/{{id}}"><button id="submit">Edit</button></a>
+</form>
+<form action="/products/{{id}}?_method=delete" method="post">
+<button id="submit">Delete</button>
+</form>
+    </ul>
+    {{/each}}
+</div>

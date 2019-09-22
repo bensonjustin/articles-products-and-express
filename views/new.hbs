@@ -1,0 +1,14 @@
+<h1>New Product</h1>
+<div>{{#if error}}
+        <p>{{error.errorMessage}}</p>
+        {{/if}}
+    </div>
+<form action="/products" method="post">
+<label for="name">Name</label>
+<input type="text" name="name" id="name">
+<label for="price">Price</label>
+<input type="text" name="price" id="price" placeholder="$0">
+<label for="inventory">Inventory</label>
+<input type="text" name="inventory" id="inventory" placeholder="0">
+<button id="submit">Submit</button>
+</form>

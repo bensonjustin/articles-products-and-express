@@ -1,0 +1,10 @@
+<h1>Edit Product</h1>
+<form action="/products/{{product.id}}?_method=PUT" method="post">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" value="{{product.name}}">
+    <label for="price">Price</label>
+    <input type="text" name="price" id="price" value="{{product.price}}">
+    <label for="inventory">Inventory</label>
+    <input type="text" name="inventory" id="inventory" value="{{product.inventory}}">
+    <button id="submit">Submit</button>
+</form>

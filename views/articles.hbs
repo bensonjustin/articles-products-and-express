@@ -1,0 +1,20 @@
+<div>
+    <a href="articles/newA"><button id="post">Create New Article</button></a><br>
+    <h1>Current Article List</h1>
+    <div>{{#if error}}
+        <p>{{error.errorMessage}}</p>
+        {{/if}}
+    </div>
+    {{#each articles}}
+    <ul>
+        <li>title: {{title}}</li>
+        <li>body: {{body}}</li>
+        <li>author: {{author}}</li>
+        <a href="articles/edit/{{urlTitle}}"><button id="submit">Edit</button></a>
+        </form>
+        <form action="/articles/{{urlTitle}}?_method=delete" method="post">
+            <button id="submit">Delete</button>
+        </form>
+    </ul>
+    {{/each}}
+</div>
